@@ -10,7 +10,7 @@ services:
       - exposed
 
   portainer:
-    image: portainer/portainer-ce:lts
+    image: portainer/portainer-ee:lts
     command: -H unix:///var/run/docker.sock
     restart: always
     environment:
