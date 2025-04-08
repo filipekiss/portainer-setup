@@ -8,6 +8,10 @@ services:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
     networks:
       - exposed
+    labels:
+      glance.parent: portainer
+      glance.name: Nginx Proxy
+      glance.icon: si:nginx
 
   portainer:
     image: portainer/portainer-ee:lts
@@ -23,6 +27,12 @@ services:
       - portainer_data:/data
     networks:
       - exposed
+    labels:
+      glance.id: portainer
+      glance.name: Portainer
+      glance.icon: si:portainer
+      glance.url: https://portainer.purrple.monster
+
 
 volumes:
   portainer_data:
