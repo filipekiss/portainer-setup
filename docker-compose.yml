@@ -34,6 +34,16 @@ services:
       glance.url: https://portainer.purrple.monster
       glance.same-tab: true
 
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=true
+    restart: always
+    networks:
+        - exposed
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
 
 volumes:
   portainer_data:
