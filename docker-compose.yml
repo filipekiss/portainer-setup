@@ -32,6 +32,7 @@ services:
       glance.name: Portainer
       glance.icon: si:portainer
       glance.url: https://portainer.purrple.monster
+      glance.same-tab: true
 
 
 volumes:
