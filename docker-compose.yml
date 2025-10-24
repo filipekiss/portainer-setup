@@ -18,7 +18,7 @@ services:
     command: -H unix:///var/run/docker.sock
     restart: always
     environment:
-      - VIRTUAL_HOST=portainer.purrple.monster
+      - VIRTUAL_HOST=portainer.filipekiss.dev
       - VIRTUAL_PORT=9000
     ports:
       - 8000:8000
@@ -31,7 +31,7 @@ services:
       glance.id: portainer
       glance.name: Portainer
       glance.icon: si:portainer
-      glance.url: https://portainer.purrple.monster
+      glance.url: https://portainer.filipekiss.dev
       glance.same-tab: true
 
   watchtower:
